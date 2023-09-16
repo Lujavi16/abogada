@@ -1,0 +1,179 @@
+@media (min-width: 992px) and (max-width: 1440px) {
+    nav{
+        height: 8.5rem;
+        width: 100vw;
+        background-color: var(--black);
+        display: flex;
+        position: fixed;
+        z-index: 10;
+    }
+    .logo img {
+        width: 250px;
+        height: auto;
+        margin-top: 8px;
+        margin-left: 20px;
+    }
+    .nav-links{
+        display: flex;
+        list-style: none;
+        font-size: 1.4rem;
+        width: 88vw;
+        /*padding: 0 0.7vw;*/
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .nav-links li a{
+        text-decoration: none;
+        color: var(--white);
+        margin: 0 0.7vw;
+    
+    }
+    .nav-links li a:hover {
+        color: var(--oro);
+    }
+    .nav-links li {
+        position: relative;
+    }
+    .nav-links li a:hover::before {
+        width: 80%;
+    }
+    .nav-links li a.active {
+        color: var(--oro2);
+    }
+
+    .breadcrumbs {
+        padding-top: 105px;
+    }
+    .context {
+        display: flex;
+        padding: 40px;
+    }
+    .text p {
+        font-size: 1.9rem;
+        line-height: 1.8em;
+        margin-bottom: 40px;
+    }
+    .text button {
+        width: 80%;
+        font-size: 1.9rem;
+    }
+    .image img {        
+        width: 450px;
+        height: auto;
+        margin-top: 38px;       
+    }
+    .card {
+        display: flex;
+
+    }
+    .card-1 {
+        width: 45%;
+        /*display: stretch;*/
+    }
+    .card-1 h2 {
+        font-size: 2.2rem;
+    }
+    .card-1 p {
+        font-size: 1.9rem;
+    }
+    .text-imag {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+    .ale {
+        width: 250px;
+        height: 350px;
+        padding: 0;
+    }
+    .text-image_profile {
+        width: 18.3rem;
+        margin: 350px 0px 0px 64px;
+    }
+    @media (min-width: 1020px)and (max-width:1026px) {
+        .text-image_profile {
+            margin: 396px 0px 0px 64px;
+        }
+    }
+    .text-subt {
+        font-size: 2.2rem;
+    }
+    .text-p {
+        font-size: 1.9rem;
+    }
+
+    .slider-h2 {
+        font-size: 2.7rem;
+    }
+    #word {
+        font-size: 2.7rem;
+    }
+    
+    .image-container img {
+        width: 900px;
+        border-radius: 16px;
+    }
+    .text-container p {
+        font-size: 1.9rem;
+    }
+
+    .tarjeta {
+        display: flex;
+        gap: 1px;
+    }
+
+    .tarjetas {
+        width: 27%;
+        display: grid;
+        
+    }
+
+    .call-button {
+        width: 70px;
+        height: 70px;
+        margin-right: 1065px;
+        margin-top: 20px;
+        /*margin-bottom: 10px;*/
+    }
+
+    .call-button svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chat-button {
+        width: 70px;
+        height: 70px;
+        margin: 20px;
+        /*margin-bottom: 10px;*/
+    }
+    
+    @media (min-width: 1440px) and (max-width: 2500px) {
+        .call-button {
+            margin-right: 1199px;
+        }
+    }
+
+    footer {
+        background-image: url(/assets/alejandra-silva-abogada-escritorio.jpg);
+        background-size: cover;
+        padding: 60px 0;
+    }
+
+    .pie {
+        width: 100%;
+        display: flex;
+    }
+
+    .logo1 {
+        width: 50%;
+    }
+
+    .logo1 img {
+        width: 500px;
+        margin-top: 70px;
+        /*z-index: 20;*/
+    }
+
+}

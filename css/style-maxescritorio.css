@@ -1,0 +1,238 @@
+@media (min-width: 1441px) and (max-width: 2560px) {
+    p {
+        font-size: 3.2rem;
+    }
+    h2 {
+        font-size: 4.2rem;
+    }
+    nav{
+        height: 14.5rem;
+        width: 100vw;
+        background-color: var(--black);
+        display: flex;
+        position: fixed;
+        z-index: 10;
+    }
+    .logo img {
+        width: 45rem;
+        height: auto;
+        margin-top: 14px;
+        margin-left: 25px;
+        }
+    .nav-links{
+        display: flex;
+        list-style: none;
+        font-size: 2.7em;
+        width: 88vw;
+        /*padding: 0 0.7vw;*/
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .nav-links li a{
+        text-decoration: none;
+        color: var(--white);
+        margin: 0 0.7vw;
+        
+    }
+    .nav-links li a:hover {
+        color: var(--oro);
+    }
+    .nav-links li {
+        position: relative;
+    }
+    .nav-links li a:hover::before {
+        width: 80%;
+        color: var(--oro2);
+    } 
+    .nav-links li a.active {
+        color: var(--oro2);
+    }
+
+    .breadcrumbs {
+        font-size: 1.9rem;
+        margin-left: 60px;
+        padding-top: 155px;
+    }
+        
+    main {
+        width: 100%;
+        height: auto;
+    }
+    .context {
+        display: flex;
+        padding: 40px;
+    }
+    .text {
+        margin-left: 50px;
+        padding: 20px;
+    }
+    .text h1 {
+        font-size: 4.8rem;
+        margin-top: 70px;
+        align-items: center;
+    }
+    .text p {
+        font-size: 3.2rem;
+        line-height: 1.8em;
+    }
+    .text button {
+        width: 60%;
+        font-size: 3.7rem;
+    } 
+    .image {
+        width: 100%;
+        align-items: center;
+        margin-left: 350px;
+    } 
+    .image img {
+        width: 700px;
+        margin-top: 70px;
+    } 
+    .pulse-button > svg {
+        height: 60px;
+        margin-left: -65px;
+        margin-top: -8px;
+    } 
+    .card-1 svg {
+        width: 250px;
+        height: 250px;
+    }
+    .card-1 h2 {
+        font-size: 4.2rem;
+    }
+    .card-1 p {
+        font-size: 3.2rem;
+        line-height: 1.5em;
+    } 
+    .text-imag {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .ale {
+        width: 300px;
+        height: auto;
+        padding: 0;
+    }
+    .text-image_profile {
+        width: 21.5rem;
+        margin: 435px 0px 0px 158px;
+    }
+    .text-subt {
+        font-size: 4.5rem;
+    } 
+
+    .text-p {
+        font-size: 3.2rem;
+    }
+    
+    .slider {
+        font-size: 4.2rem;
+    }
+
+    .slider-h2 {
+        font-size: 6.2rem;
+    }
+    #word {
+        font-size: 7rem;
+    }
+    .importancia {
+        font-size: 4.2rem;
+    }
+    
+    .image-container img {
+        width: 1200px;
+        height: auto;
+        border-radius: 20px;
+        padding: 3em;
+    }
+
+    .tarjeta {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .tarjetas {
+        width: 47%;
+        display: grid; 
+        justify-content: center;
+        margin-left: 150px;       
+    }
+
+    .tarjetas svg {
+        margin-left: 187px;
+    }
+
+    .tarjetas-texto h2 {
+        font-size: 4.2rem;
+    }
+
+    .btn {
+        font-size: 3.3rem;
+    }
+
+    .btn svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-buttons {
+        right: 29px;
+    }
+
+    .call-button {
+        width: 150px;
+        height: 150px;
+        margin-right: 2160px;
+        margin-bottom: 20px;
+    }
+
+    .call-button svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .chat-button {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    footer {
+        background-image: url(/assets/alejandra-silva-abogada-escritorio.jpg);
+        background-size: cover;
+        padding: 60px 0;
+    }
+
+    .pie {
+        width: 100%;
+        display: flex;
+    }
+
+    .logo1 {
+        width: 50%;
+    }
+
+    .logo1 img {
+        width: 700px;
+        margin-top: 70px;
+        /*z-index: 20;*/
+    }
+
+    .contact-text_A {
+        font-size: 4.2rem;
+    }
+
+    .contact-text {
+        font-size: 3.2rem;
+        margin-bottom: 1em;
+    }
+    
+    .email {
+        color: var(--oro2);
+    }
+
+}

@@ -1,0 +1,678 @@
+* {    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}*/
+
+
+:root {
+    --black: #000000;
+    --ocre: #795300;
+    --oro1: #efb810;
+    --oro2: #f9db5c;
+    --oro: #b28405;
+    --yellow: #ffff94;
+    --white: #ffffff;
+    --red: #ff0000;
+    --red-vine: #7f0000;
+    --carmesi: #bd0003;
+    --curuba: #ffa372;
+    --WhatsApp: #00bb2d;
+    --whatsapp2: #2d572c;
+}
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--white);
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    nav {
+        height: auto;
+        width: 100%;
+        background-color: var(--black);
+        display: flex;
+        top: 0;
+
+        z-index: 10;
+    }   
+    nav{
+        position: fixed;
+    }
+    .logo img {
+        width: 250px;
+        height: auto;
+        margin-top: 7px;  
+        margin-left: 5px;      
+    }
+    .hamburger div {
+        width: 39px;
+        height: 5px;
+        background: var(--white);
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 10;
+        transition: all 0.7s ease;
+    }
+    .nav-links {
+        position: fixed;
+        background: var(--black);        
+        width: 100%;
+        height: 65%;        
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        z-index: 5;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+        padding: 10px;
+        text-align: center;
+        /*z-index: 10;*/
+    }
+    .nav-links li{
+        opacity: 0;
+        padding: 30px;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+    .nav-links li a {
+        color: var(--white);
+        font-size: 1.8rem;
+        text-decoration: none;
+        margin: 10px;
+    }
+    .nav-links li a.active {
+        color: var(--oro2);
+    }
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .toggle .line2{
+        transition: all 0.7s ease;
+        width:0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+}
+
+.breadcrumbs {
+    font-size: 1.4rem;
+    color: var(--white);
+    position: relative;
+    padding-top: 75px;
+    margin-left: 2em;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+}
+
+.breadcrumbs li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.breadcrumbs li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.breadcrumbs li a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs li a.active {
+    color: var(--oro2);
+}
+
+.breadcrumbs li:last-child {
+    font-weight: bold;
+}
+main {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+
+
+.context {
+    width: 100%;
+    height: auto;
+    display: grid;
+}
+.text {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+.text h1 {
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: 4.6rem;
+    padding-top: 75px;
+    padding-left: 1em;
+    padding-right: 2em;
+    color: var(--oro1);
+}
+.text p {    
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 25px;
+    padding-left: 1em;
+    padding-right: 2em;
+    text-align: center;
+    line-height: 1.4em;
+    color: var(--white);
+}
+.image {
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.image img {
+    position: relative;
+    width: 300px;
+    height: auto;
+    align-items: center;
+    margin-left: 35px;    
+    transition: transform 0.3s ease-in-out;
+    animation: floatAnimation 3s infinite;
+}
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pulse-button {
+    width: 79%;
+    margin-top: 20px;
+    font-size: 1.6rem;
+    padding: 0.5em;
+}
+
+
+.pulse-button {
+    background-color: var(--WhatsApp);
+    color: var(--white);    
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    animation: pulse 1.8s infinite;
+    box-shadow: 0 0 10px rgba(0, 187, 45, 0.5);
+    cursor: pointer;
+}
+
+.pulse-button > svg {
+    height: 25px;
+    position: absolute;
+    
+    margin-left: -30px;
+    padding: 0px 9px 0px 2px;
+    margin-top: -4px;
+  }
+
+.button2:is(:hover, :focus) {
+    transform: scale(1.1);
+}
+  
+@keyframes pulse {
+    100% {
+      box-shadow: 0 0 0 45px rgba(193,244,246,0);
+    }
+}
+.card {
+    width: 100%;
+    height: auto;
+    display: grid;
+    align-items: center;
+}
+.card-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: var(--ocre);
+    margin: 15px;
+    padding: 20px;
+    width: 90%;
+}
+.card-1 h2 {
+    font-size: 2.0rem;
+    text-align: center;
+    margin: 15px;
+}
+.card-1 p {
+    font-size: 1.8rem;
+    color: var(--white);
+    text-align: justify;
+}
+.text-imag {
+    position: relative;
+    text-align: center;
+}
+
+.ale {
+    width: 60%;
+    height: auto;
+    align-items: center;
+    margin-left: 30px;
+    position: relative;
+}
+.text-image_profile {
+    background-color:var(--ocre);
+    height: 10px;
+    position: absolute;
+    width: 18.1rem;
+    margin: 365px 0px 0px 138px;    
+    /*margin-top: -10px;*/
+    border-radius: 7px;
+}
+
+.text-subt {
+    font-size: 2.0rem;
+    text-align: center;
+    margin: 15px;
+    padding-left: 1em;
+    padding-right: 2em;
+
+}
+.text-p {
+    font-size: 1.8rem;
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    color: var(--white);
+    text-align: justify;
+}
+
+.slider {
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slider-h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#word {
+    font-size: 2.3rem;
+    color: var(--oro);
+    margin-top: 0.4em;
+    margin-bottom: 1.5em;
+    animation: slideWords 3s infinite linear;
+    display: inline-block;
+}
+
+
+
+@keyframes slideWords {
+    0%,
+    3% { transform: translateY(0%);}
+
+   100% { transform: translateY(-3%);}
+    
+}
+
+.importancia {
+    width: 100%;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 2em;
+    
+}
+
+.p {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 1.8rem;
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    text-align: justify;
+}
+
+.p h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0em 2em 1em 1em;
+    
+}
+.image-container img {
+    width: 320px;
+    padding-bottom: 2em;
+    border-radius: 8px;
+}
+.text-container {
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: justify;
+    margin-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 2em;
+}
+.text-container h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.tarjetas {
+    width: 80%;
+    height: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    /*margin: 30px;*/
+    padding: 30px 15px;
+    background-color: var(--red);
+    border-radius: 10px;
+    border: none;
+    color: var(--white);
+    position: relative;
+    /*cursor: pointer;*/
+    font-weight: bold;
+    transition-duration: .2s;
+    background: linear-gradient(0deg, #000, #272727);
+}
+.tarjetas svg {
+    margin-left: 27px;
+}
+
+.tarjetas:before, .tarjetas:after {
+    content: " " ;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #efb810, #f9db5c, #b28405, #ffffff, #ffa372, #efb810, #f9db5c, #b28405, #ffffff, #ffa372);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+
+.tarjetas {
+    max-width: 600px;
+    padding: 16px;
+    margin: 36px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tarjeta-content {
+    margin-top: 165px;
+}
+
+.tarjetas-texto h2 {
+    font-size: 2.2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 1.8rem;
+    color: var(--oro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn svg {
+    margin-left: 20px;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.tarjetas:after {
+    filter: blur(07px);
+}
+
+.directory {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.buho img {
+    width: 120px;
+}
+
+.contact-buttons {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    gap: 5px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+}
+
+.call-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-right: 176px;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--red);
+    animation: pulse 1.8s infinite;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.5);
+}
+
+.chat-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--WhatsApp);
+    animation: pulse 1.8s infinite;
+    box-shadow: 0 0 18px rgba(0, 187, 45, 0.5);
+}
+
+@keyframes pulse {
+    100% {
+      box-shadow: 0 0 0 25px rgba(193,244,246,0);
+    }
+}
+
+@media (min-width: 375px) and (max-width: 420px) {
+
+    .text-image_profile {
+        width: 16.1rem;
+        margin: 325px 0px 0px 125px; 
+    }
+    .call-button {
+        width: 80px;
+        height: 80px;
+        margin-right: 185px;
+    }
+    .call-button svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .chat-button {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+
+    .text-image_profile {
+        width: 13.1rem;
+        margin: 275px 0px 0px 108px; 
+    }
+
+    .directory {
+        display: grid;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .A {
+        width: 20px;
+        height: 20px;
+    }
+    .call-button {
+        width: 80px;
+        height: 80px;
+        margin-right: 155px;
+    }
+
+    .call-button svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .chat-button {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo img {
+        width: 190px;
+    }
+}
+
+footer {
+    background-image: url(/assets/alejandra-silva-abogada-movil.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    padding: 1em;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo1 {
+    z-index: 1;
+}
+
+.logo1 img {
+    width: 400px;
+}
+
+.contact {
+    position: relative;
+    align-items: center;
+    z-index: 1;
+}
+
+.contact-text_A {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+}
+
+.email {
+    color: var(--oro2);
+}
